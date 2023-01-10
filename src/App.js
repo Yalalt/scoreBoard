@@ -21,7 +21,6 @@ function App() {
     const newList = [...users];
     newList[scc].score--;
     addUser([...users]);
-    console.log(users);
   };
 
   
