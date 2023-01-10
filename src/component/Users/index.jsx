@@ -1,15 +1,23 @@
 const Users = (props) => {
-  props.usersData.map((item) => {
-    console.log("Item: " + item.id);
-    console.log("Item: " + item.name);
-    console.log("Item: " + item.score);
-    return (
-      <div className="flex gap-x-2 border">
-        <span className="">{item.id}</span>
-        <span className="">{item.name}</span>
-        <span className="">{item.score}</span>
-      </div>
-    );
-  });
+  return (
+    <table className="border-separate border-spacing-1 border border-slate-400 w-full text-center my-10">
+      <thead className="w-10">
+        <tr>
+          <th className="border border-slate-300">ID</th>
+          <th className="border border-slate-300">Name</th>
+          <th className="border border-slate-300">Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {props.usersData.map((user, ind) => (
+          <tr key={ind}>
+            <td className="border border-slate-300">{user.id}</td>
+            <td className="border border-slate-300">{user.name}</td>
+            <td className="border border-slate-300">{user.score}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
 };
 export default Users;

@@ -1,9 +1,7 @@
 const Header = (props) => {
   return (
     <div className="flex mt-10 justify-between align-middle w-full font-bold">
-      <span className="pt-2 text-lg">
-        Total Player: {props.users.length + 1}
-      </span>
+      <span className="pt-2 text-lg">Total Player: {props.users.length}</span>
       <div className="flex gap-x-6">
         <button
           type="button"

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./component/Header";
 import Users from "./component/Users";
 import Controller from "./component/Controller";
+import Modal from "./component/Modal";
 
 function App() {
   let [userNo, setUserNo] = useState(0);
@@ -18,6 +19,7 @@ function App() {
       <Header users={users} />
       <Users usersData={users} />
       <Controller />
+      <Modal className="hidden" />
     </div>
   );
 }
