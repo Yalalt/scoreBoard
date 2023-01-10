@@ -11,11 +11,25 @@ function App() {
   ]);
   const userAdd = (newUser) => addUser([...users, {id: users.length + 1, name: newUser.name, score: newUser.score}]);
 
+  const addScore = (sc) => { 
+    const newList = [...users];
+    newList[sc].score++;
+    addUser([...users]);
+  };
+  
+  const downScore = (scc) => { 
+    const newList = [...users];
+    newList[scc].score--;
+    addUser([...users]);
+    console.log(users);
+  };
+
+  
 
   return (
     <div className="App h-screen flex flex-col items-center justify-center container md:mx-auto ">
       <Header users={users} callUserState={addUser} />
-      <Users usersData={users} />
+      <Users usersData={users} addScore={addScore} subScore={downScore} />
       <Modal userAddFunc={userAdd} />
     </div>
   );
