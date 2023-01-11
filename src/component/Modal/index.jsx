@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const Modal = (props) => {
+const Modal = ({ userAdd }) => {
   const [showModal, setShowModal] = useState(false);
   const [userName, setUsername] = useState("");
   const [userScore, setUserscore] = useState("");
 
   const handleAddUserProps = (e) => {
     e.preventDefault();
-    return props.userAddFunc({ name: userName, score: userScore });
+    return userAdd.userAddFunc({ name: userName, score: userScore });
   };
 
   return (
