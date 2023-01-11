@@ -1,16 +1,15 @@
 const Header = (props) => {
-
   // props.callUserState function name
   const nameBySort = () => {
     props.users.sort((a, b) => {
       const nameA = a.name.toUpperCase();
       const nameB = b.name.toUpperCase();
 
-      if(nameA < nameB) {
+      if (nameA < nameB) {
         return -1;
       }
 
-      if(nameA > nameB) {
+      if (nameA > nameB) {
         return 1;
       }
 
@@ -26,8 +25,10 @@ const Header = (props) => {
   };
 
   return (
-    <div className="flex mt-10 justify-between align-middle w-full font-bold">
-      <span className="pt-2 text-lg">Total Player: {props.users.length}</span>
+    <div className="flex justify-between w-full font-bold border-b-4 pb-2">
+      <span className="pt-2 text-lg text-blue-600">
+        Total Player: {props.users.length}
+      </span>
       <div className="flex gap-x-6">
         <button
           type="button"
