@@ -1,2 +1,2 @@
 # scoreBoard
-Score to display board using react
+Display the score on the board using react
